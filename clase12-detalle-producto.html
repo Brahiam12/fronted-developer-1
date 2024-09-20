@@ -85,6 +85,30 @@
         align-items: center;
         justify-content: center;
     }
+    .points {
+        display: flex;
+        justify-content: center;
+      }
+      .points > li {
+        background: var(--very-light-pink);
+        width: 8px;
+        height: 8px;
+        margin: 8px 6px;
+        border-radius: 50%;
+        list-style-type: none;
+        cursor: pointer;
+      }
+      .points > .active {
+        background: var(--hospital-green);
+      }
+      .points > li:hover {
+        background: var(--hospital-green);
+      }
+     @media (max-width: 640px) {
+        .product-detail{
+            width: 100%;
+        }
+     }
     </style>
 </head>
 <body>
@@ -93,13 +117,20 @@
             <img src="./icons/icon_close.png" alt="close">
         </div>
         <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike">
+        <div class="points">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+          </div>
         <div class="product-info">
-            <p>$520.000</p>
+            <p>$520.000,00</p>
             <p>Bicicleta</p>
             <p>Bicicleta Roadmaster Hurricane Rin 29 Todoterreno Cambios Shimano Tourney 21 V Frenos De Disco Mecanico Suspension De Bloqueo Color Negro Gris Talla L</p>
             <button class="primary-button add-to-cart-button">
                 <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+                Agregar al carro
             </button>
+        </div>    
     </aside>
 </body>
 </html>
